@@ -1,9 +1,9 @@
 // ai api key
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:intl/intl.dart';
 
-String API_KEY = 'AIzaSyDjAepH9MO7mMtwivFscaZiQHQPo1WbXs8';
-String MODEL = 'gemini-1.5-flash-latest';
-
+String API_KEY = dotenv.get('API_KEY');
+String MODEL = dotenv.get('MODEL');
 String formatDateTimeString(String dateString) {
   DateTime parsedDate = DateTime.parse(dateString);
   final formatter = DateFormat("yyyy-MM-dd HH:mm'");

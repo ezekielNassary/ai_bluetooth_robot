@@ -1,10 +1,12 @@
 import 'package:bluetooth_ai_robot/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_blue_plus/flutter_blue_plus.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
-void main() {
+Future<void> main() async {
   // FlutterBluePlus.setLogLevel(LogLevel.verbose, color: false);
+  await dotenv.load(fileName: "assets/.env");
   runApp(const MyApp());
 }
 
